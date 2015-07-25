@@ -1,0 +1,11 @@
+app:
+  build: .
+  ports:
+    - "9000:9000"
+  links:
+    - redis
+  volumes:
+    - ".:/go/src/app"
+
+redis:
+  image: redis
